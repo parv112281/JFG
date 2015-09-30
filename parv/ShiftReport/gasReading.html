@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JFG Shift Closeout Sheet</title>
+<style>
+body {
+	background-color:rgb(231,238,247);
+	font-family: "Roboto";
+	color: rgb(140,140,140);
+	font-weight: 400;
+	font-size: 1.2rem;
+	font-style: normal;
+	}
+div {
+	background-color:rgb(255,255,255);
+	height:auto;
+	width:auto;
+	padding:20px;
+	border-style:solid;
+	border-width:3px;
+	border-color:rgb(0,0,0);
+	display:block;
+	}
+</style>
+<script src="gasReading.js"></script>
+
+
+</head>
+<body>
+	<div id="mainForm">
+		<form>
+			<table>
+				<tr>
+					<td></td>
+					<td>Gas Readings</td>
+				</tr>
+				<tr>
+					<td>Reg UNL</td>
+					<td><input type="text" name="regunl" id="regunl" /></td>
+				</tr>
+				<tr>
+					<td>Mid UNL</td>
+					<td><input type="text" name="midunl" id="midunl" /></td>
+				</tr>
+				<tr>
+					<td>Pre UNL</td>
+					<td><input type="text" name="preunl" id="preunl" /></td>
+				</tr>
+				<tr>
+					<td>Diesel</td>
+					<td><input type="text" name="diesel" id="diesel" /></td>
+				</tr>
+				<tr>
+					<td></td>
+					<td><input type="button" onClick="submitReadings()" value="submit" /></td>
+				</tr>
+			</table>
+		</form>
+	</div>
+</body>
+</html>

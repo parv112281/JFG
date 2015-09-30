@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>JFG Shift Closeout Sheet</title>
+<style>
+body {
+	background-color:rgb(231,238,247);
+	font-family: "Roboto";
+	color: rgb(140,140,140);
+	font-weight: 400;
+	font-size: 1.2rem;
+	font-style: normal;
+	}
+div {
+	background-color:rgb(255,255,255);
+	height:auto;
+	width:auto;
+	padding:20px;
+	border-style:solid;
+	border-width:3px;
+	border-color:rgb(0,0,0);
+	display:block;
+	}
+#actualMOPs, #receiptMOPs, #safeChangeStart, #safeChangeEnd  {display:none;}
+</style>
+<script src="displayFunctions.js"></script>
+
+
+</head>
+<body>
+	<div id="landing">
+		<form>
+			<table>
+				<tr>
+					<td>Shift Date:</td>
+					<td><input type='date' name='shiftDate' id='shiftDate' /></td>
+				</tr>
+				<tr>
+					<td>Shift Number:</td>
+					<td><input type='text' name='shiftNumber' id='shiftNumber' /></td>
+				</tr>
+				<tr>
+					<td>Name:</td>
+					<td><input type='text' name='name' id='name' /></td>
+				</tr>
+			</table>
+			<input type="button" onclick="landingResults();" value="Submit" /></td>
+		</form>
+		<span id="testArea"></span>
+	</div>
+	<div id="actualMOPs">
+	</div>
+	<div id="receiptMOPs">
+	</div>
+	<div id="safeChangeStart">
+	</div>
+	<div id="safeChangeEnd">
+	</div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+CrudItem class:
+	parameters: Document doc, NodeList nodeList
+	constructor:
+		(Document doc, NodeList nodeList)
+			this.doc = doc
+			this.nodeList = nodeList
+	methods: create, read, update, destroy
+		
+		create:
+			parameters: Element elem, Item item
+			pseudo-code:
+				declare variable of type Element and assign it elem
+				Element newItem = this.doc.createElement("domain:PLU")
+				for each field of item:
+					Element upc = doc.createElement("upc")
+					upc.appendChild(doc.createTextNode(item.getUPC()))
+					newItem.appendChild(upc)
+				endfor
+				elem.appendChild(newItem)
+				
+		read:
+			parameters: String upc
+			pseudo-code: 
+				 for each item i in nodeList:
+				 	Node node = nodeList.item(i)
+				 	if (node.getNodeType() == Node.ELEMENT_NODE)
+				 		Element elem = (Element) node;
+				 		for each field in item:
+				 			set field from appropriate element in elem
+				 				e.g. elem.getElementsByTagName("upc").item(0).getChildNodes().item(0).setNodeValue(item.getUPC())
+				 			
+				 		return item
+				 		
+		update:
+			parameters: String updateField, String value
+				 	
+				 	
+				 	
+				 	
+				 	
+				 	
+		
+				 	
+				 	
+				 	
+				 	if (node.getNodeType() == Node.ELEMENT_NODE) {
+					Element elem = (Element) node;
+					if (elem.getElementsByTagName("upc").item(0)
+							.getChildNodes().item(0).getNodeValue()
+							.equals("00" + upc.getUPC())) {
+						System.out.println(elem
+								.getElementsByTagName("description").item(0)
+								.getChildNodes().item(0).getNodeValue());
+						System.out
+								.println(elem.getElementsByTagName("price")
+										.item(0).getChildNodes().item(0)
+										.getNodeValue());
+						
+						try {
+							System.out.println(((Node)(((Element)(elem.getElementsByTagName("taxRates")
+									.item(0))).getElementsByTagName("domain:taxRate").item(0)))
+									.getAttributes().getNamedItem("sysid").getNodeValue());
+						} catch (Exception e) {
+							continue;
+				
+			
+			
+				
